@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+html:not(.dark) .ph-sun,
+html.dark .ph-moon {
+    display: none;
+}
+
+html.dark {
+    --text-color:#E1E1E6;
+    background: #323238;
+    --controls-active:#02799D
+}
+
+:root {
+    --text-color: #323238;
+    --btn-bg: #E1E1E6;
+    --btn-focus: #02799D;
+    --controls-active:#323238;
+    font-size: clamp(40%, 1% + 1vw, 62.5%);
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+}
+
+#toggle-mode {
+    display: flex;
+    background: transparent;
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    border: none;
+
+    font-size: 3rem;
+
+    cursor: pointer;
+    color: var(--text-color);
+
+    &:active {
+        background: var(--controls-active);
+        color: white;
+        border-radius: .8rem;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    height: 0;
+    width: 0;
+    margin: -0;
+    border: none;
+    overflow: hidden;
+}
+
+
+#display span {
+    font-size: 12.6rem;
+    font-family: 'roboto',sans-serif;
+    color: var(--text-color);
+}
+
+#clock {
+    display: flex;
+    gap: 4.0rem;
+    margin-top: 1.7rem;
+    
+}
+
+
+#clock button {
+    font-size: 4.4rem;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    
+
+    cursor: pointer;
+
+    &:active {
+        background: var(--controls-active);
+        color: white;
+        border-radius: .8rem;
+    }
+
+    &.dark {
+        color: white;
+    }
+}
+
+
+#music {
+    display: grid;
+    width: 50%;
+    grid-gap: 3.2rem;
+    grid-template-columns: 13.8rem 13.8rem;
+    grid-template-rows: 15.2rem 15.2rem;
+    align-content: center;
+    justify-content: center;
+}
+
+#music button {
+    border-radius: 2.4rem;
+    border: none;
+    font-size: 4.4rem;
+    background: var(--btn-bg);
+    cursor:pointer;
+
+    &:focus {
+        background:var(--btn-focus);
+        color: white;
+    }
+}
+    
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FocusTimer no estilo Pomodoro">
+
+    <title>FocusTimer - Pomodoro</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js" defer></script>
+
+</head>
+
+<body>
+    <div class="app">
+        <button id="toggle-mode">
+            <span class="sr-only">Ativar light mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+
+        <section id="display">
+            <span id="minutes" data-action="set">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+
+        <section id="clock">
+            <button class="ph ph-play-pause" data-action="toggleRunning">
+                <span class="sr-only">Play/Pausar contador</span>
+            </button>
+            <button class="ph ph-stop" data-action="reset">
+                <span class="sr-only">Parar contador</span>
+            </button>
+            <button class="ph ph-plus" data-action="setMore">
+                <span class="sr-only">Adicionar 5 minutos no contador</span>
+            </button>
+            <button class="ph ph-minus" data-action="setLess">
+                <span class="sr-only">Remover 5 minutos do contador</span>
+            </button>
+
+        </section>
+    </div>
+
+    <section id="music">
+        <button class="ph ph-tree" data-action="forest">
+            <span class="sr-only"> Ativar Som de floresta</span>
+        </button>
+        <button class="ph ph-cloud-rain" data-action="rain">
+            <span class="sr-only"> Ativar Som de Chuva</span>
+        </button>
+        <button class="ph ph-storefront" data-action="coffe">
+            <span class="sr-only"> Ativar Som de Loja</span>
+        </button>
+        <button class="ph ph-fire" data-action="fireplace">
+            <span class="sr-only"> Ativar Som de chamas</span>
+        </button>
+    </section>
+</body>
+
+</html>
